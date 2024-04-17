@@ -10,11 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hahmlet:wght@100..900&family=Jacquarda+Bastarda+9+Charted&family=Jersey+10+Charted&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @media (max-width: 600px) {
-            *{
-                font-size:0.2em;
-            }
-        }
         *{
             font-family: "Jua", sans-serif;
             font-weight: 400;
@@ -41,16 +36,20 @@
             border-collapse:collapse;
             color:white;}
         #background-color{
-            /* background-color:rgba(0, 59, 107, 0.7); */
-            background-color:rgba(20, 56, 80, 0.8);
+            background-image: radial-gradient(circle at top, rgba(17, 0, 255, 0.685),rgba(0, 183, 255, 0.544), rgba(99, 125, 255, 0.512));
+
+            /* color:black !important;    */
+            /* background-image: linear-gradient(to right, rgba(182, 182, 182, 0.561), rgba(0, 0, 0, 0.83)); */
+
             color:white;    
         }
 
         #nav-top{
-            background-color: rgba(90, 177, 224, 0.895);
+            background-image: linear-gradient(to right, rgba(0, 229, 255, 0.569), rgba(34, 0, 255, 0.674));
             position:fixed;
             width:100%;
-            top:0;
+            height:10% ;
+            top:0   ;
             z-index:100;
             display: flex;
             justify-content: space-evenly;
@@ -60,7 +59,7 @@
 
         #nav-top a{
             color:white;
-            font-size: 20px;
+            font-size: 1.5em;
             text-decoration: none;
         }
         #nav-top a:hover{
@@ -92,12 +91,14 @@
             transition:transform 1s, ease, 1s;
         }
         #header-transition{
-            margin: 7% 5% 10px;
-            height:100px;
+            margin: 10% 5% 5%;
             transition: width, 3s, ease-in,  1s; 
         }
         #header-transition:hover{
+            color:rgb(0, 0, 0);
+            text-shadow: 3px 3px 4px rgba(2, 33, 118, 0.507);
             margin: 10% 10% 10px ;
+            font-size: 1.2em;
             transition: transform scale(0.3);
         }
         br ~ hr{
@@ -120,9 +121,9 @@
             transition: all 2s ease 0.1s;
         }
 
-        .header{
-            padding:10px;
-            }
+        /* .header{
+            padding:5%;
+            } */
         .flex-container{
             display: flex;
             justify-content: space-around;
@@ -207,24 +208,25 @@
             
         }
         .flex-After10year-item{
-            padding:20px;
+            padding:3%;
             flex:1;
             font-weight:normal;
             text-shadow: 3px;
             box-sizing: border-box;
-            background-color: rgb(255, 225, 185,0.3);
+            background-color: rgba(179, 0, 255, 0.091);
             border-radius: 10px;
             margin:10px;
             box-shadow:10px 10px rgb(255, 0, 0,0.2) ;
         }
         .flex-After10year-item:hover{
+            color:black;
             z-index:40;
             width:100%;
             flex:3;
             font-size: larger;
         }
         .flex-After10year > section > h2{
-            background-color:rgba(255, 247, 140, 0.5) ;
+            background-color:rgba(4, 255, 0, 0.214) ;
         }
         .AI-service-table{
             margin-left: auto;
@@ -258,13 +260,13 @@
             width: 100%;
             height: 30px;    /* 비행기가 화면 밖으로 나갈 때 보이지 않도록 설정 */
         }
-        #airplane {
-            font-size: 50px;
+        /* #airplane {
+            font-size: 5em;
             position: absolute;
             z-index:200 ;
             top: 70px;
             animation: airplane-across 6s ease-in infinite;
-        }
+        } */
 
 
         @keyframes airplane-across {
@@ -272,9 +274,18 @@
             to { transform: translateX(100vw); }  /* 오른쪽 끝으로 이동 */
         }
 
-        .fas.fa-plane {
-            color: blue;
-            font-size: 24px;  /* 아이콘 크기 조정 */
+            @media only all and (min-width: 500px) and (max-width:800px){
+            *{
+                font-size: 0.7em!important;
+            }
+            .header{
+                font-size: 2em;
+            }
+        }
+        @media only all and (max-width:500px){
+            *{
+                font-size: 5px !important;
+            }
         }
 
         .what-CIS span{
@@ -295,12 +306,13 @@
         }
         #planeContainer {
             position: fixed;
-            top: 10px;
+            top: 1.25%;
             left: 100%; /* 가운데 정렬을 위해 변경 */
             transform: translateX(-40%); /* 가운데 정렬을 유지 */
             width: 100%; /* 컨테이너의 너비를 화면 전체로 설정 */
             height: auto;
             z-index: 1000;  
+            font-size: 3em;
         }
 
 
@@ -310,7 +322,7 @@
         }
 
         #Italia{
-            background: linear-gradient(to right,rgba(0, 128, 0, 0.7), rgba(255, 255, 255, 0.637), rgba(255, 0, 0, 0.691)); /* 좌에서 우로 빨간색에서 노란색, 녹색으로 변화 */
+            background: linear-gradient(to right,rgb(0, 128, 0), rgba(255, 255, 255, 0.637), rgb(255, 0, 0)); /* 좌에서 우로 빨간색에서 노란색, 녹색으로 변화 */
             -webkit-background-clip: text;  
             -webkit-text-fill-color: transparent; /* 크롬, 사파리용 */
             background-clip: text;
@@ -324,25 +336,42 @@
             color: transparent; /* 표준 방식 */
         }
         #Spane{
-            background: linear-gradient(to right,rgba(255, 0, 0, 0.665), rgba(255, 255, 0, 0.665), rgba(252, 3, 3, 0.639)); /* 좌에서 우로 빨간색에서 노란색, 녹색으로 변화 */
+            background: linear-gradient(to right,rgb(255, 0, 0), rgba(255, 255, 0, 0.665), rgb(252, 3, 3)); /* 좌에서 우로 빨간색에서 노란색, 녹색으로 변화 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; /* 크롬, 사파리용 */
             background-clip: text;
             color: transparent; /* 표준 방식 */
         }
+        .flex-After10year-item:hover::before {
+            font-size: 2em;;
+            content: "⭐";
+            box-shadow: 20px 10px rgba(177, 161, 161, 0.576);
+        }
+        #box-success{
+            display: none; /* 초기 상태는 숨겨져 있음 */
+            background-color: red;
+        }
+
     </style>
 
     <script>
         document.addEventListener('scroll', function() {
             var plane = document.getElementById('plane');
+            var box = document.getElementById('box-success');  // 추가할 박스 요소를 선택
             var scrolled = window.scrollY; // 스크롤된 거리를 가져옵니다.
+            var windowHeight = window.innerHeight; // 브라우저 창의 높이를 가져옵니다.
+            var documentHeight = document.documentElement.scrollHeight; // 전체 문서의 높이
             var windowWidth = window.innerWidth; // 브라우저 창의 너비를 가져옵니다.
 
-            // 스크롤에 따라 비행기의 X축 위치를 조정합니다.
-            // 여기서 scrolled / 10 은 스크롤에 따른 이동 속도를 조절합니다.
-            // 수식을 조정하여 비행기의 이동 속도와 패턴을 변경할 수 있습니다.
-            var translateX = (scrolled / 17) % windowWidth; // 스크롤 위치에 따라 X축으로 이동
+            var translateX = (scrolled / 12) % windowWidth; // 스크롤 위치에 따라 X축으로 이동
             plane.style.transform = `translateX(${translateX - 60}%)`; // 가운데에서 시작하도록 조정
+
+            // 스크롤 위치가 전체 높이의 80%에서 100% 사이일 때 박스를 보이게 합니다.
+            if (scrolled >= documentHeight * 0.8) {
+                box.style.display = 'block'; // 박스를 보이게 함
+            } else {
+                box.style.display = 'none'; // 그 외의 경우 박스를 숨김
+            }
         });
     </script>
 </head>
@@ -358,7 +387,7 @@
     </header>
 
     <div id="planeContainer" >
-        <div id="plane" style="font-size: 50px; color: rgba(0, 0, 0, 0.8);">🛫</div >
+        <div id="plane" style ="color: rgba(0, 0, 0, 0.8); pointer-events: none;">🛫</div >
     </div>
 
 
@@ -366,16 +395,9 @@
         <a href="#what">IT CIS</a>
         <a href="#main-area">배경</a>
         <a href="#in-life">목적</a>
-        <a href="#AI-img">협력대학</a>
-        <a href="#After10year">프로젝트 기대효과</a>
-        <a href="#AI-service"></a>
-        <ul class="flex-container">
-            <li class="flex_li"><a href="#">Home</a></li>
-        </ul>
-        <!-- <div class="flight-path">
-            <span id="airplane">✈️ </span>
-        </div> -->
-        
+        <a href="#AI-img">프로젝트 기대효과</a>
+        <a href="#After10year">협력대학</a>
+        <div id="box-success">해외탐방 success</div> 
     </nav>
 
 
@@ -414,6 +436,34 @@
         </section>
     </div>
     
+    <h1 style="text-align: center ;">프로젝트 기대효과</h1>
+    <div class="flex-After10year" id="After10year">
+        
+        <section class="flex-After10year-item">
+            <h2>해외 취업 및 유학 목표 대학생</h2>
+            <p>
+                • 유학이 목표인 학생의 경우, IT CIS 서비스를 통해 커리큘럼을 미리 파악하여 자신의 목표와 맞는지 확인하고,
+                그 대학이 어떤 기술을 중심적으로 두는지 파악 가능.<br>
+                • 취업이 목표인 학생의 경우, IT CIS 서비스를 통해 각국의 주가 되는 프로그래밍 언어를 파악하여 미리 대비하고 준비할 수 있음.
+            </p>
+        </section>
+        <section class="flex-After10year-item">
+            <h2>외국 대학생</h2>
+            <p>
+                • 자신이 배우고 싶은 IT 기술이 어느 학교에 있는지 파악하여 정확한 정보를 가지고 한국 유학을 준비할 수 있음.
+                <br>• IT 기술이 유명한 한국의 경우 외국 대학생에게 많은 도움을 줄 수 있기에, 기술 소통 창구로 이용될 수 있음.
+            </p>
+            
+        </section>
+        <section class="flex-After10year-item">
+            <h2>IT 계열 기술을 배우고 싶은 사람</h2>
+            <p>
+                • IT 계열이 어느 분야로 나누어져 있는지 미리 확인 가능.
+                <br>• 자신이 원하는 IT 기술이 어느 나라, 어느 대학에서 주로 쓰이는지 파악하고, 자신에게 맞는 커리큘럼에 따라 해당 기술을 배울 수 있는 곳을 손쉽게 찾을 수 있음.
+            </p>
+        </section>
+    </div>
+
     <h2 id="AI-img">협력 대학<p style="display: inline; font-size:10px;">&ltclick img&gt</p></h2>
     <div class="grid-container-img" >
         <section class="grid-container-img-item" style="opacity: 0.8;">
@@ -449,33 +499,7 @@
     <div class="hr-transition">
         <br><hr><br><hr><br><hr>
     </div>
-    <h1 style="text-align: center ;">프로젝트 기대효과</h1>
-    <div class="flex-After10year" id="After10year">
-        
-        <section class="flex-After10year-item">
-            <h2>해외 취업 및 유학 목표 대학생</h2>
-            <p>
-                • 유학이 목표인 학생의 경우, IT CIS 서비스를 통해 커리큘럼을 미리 파악하여 자신의 목표와 맞는지 확인하고,
-                그 대학이 어떤 기술을 중심적으로 두는지 파악 가능.<br>
-                • 취업이 목표인 학생의 경우, IT CIS 서비스를 통해 각국의 주가 되는 프로그래밍 언어를 파악하여 미리 대비하고 준비할 수 있음.
-            </p>
-        </section>
-        <section class="flex-After10year-item">
-            <h2>외국 대학생</h2>
-            <p>
-                • 자신이 배우고 싶은 IT 기술이 어느 학교에 있는지 파악하여 정확한 정보를 가지고 한국 유학을 준비할 수 있음.
-                <br>• IT 기술이 유명한 한국의 경우 외국 대학생에게 많은 도움을 줄 수 있기에, 기술 소통 창구로 이용될 수 있음.
-            </p>
-            
-        </section>
-        <section class="flex-After10year-item">
-            <h2>IT 계열 기술을 배우고 싶은 사람</h2>
-            <p>
-                • IT 계열이 어느 분야로 나누어져 있는지 미리 확인 가능.
-                <br>• 자신이 원하는 IT 기술이 어느 나라, 어느 대학에서 주로 쓰이는지 파악하고, 자신에게 맞는 커리큘럼에 따라 해당 기술을 배울 수 있는 곳을 손쉽게 찾을 수 있음.
-            </p>
-        </section>
-    </div>
+    
     
     
     <footer style="text-align: right;">
